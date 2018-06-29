@@ -1,0 +1,5 @@
+<ul>
+  <% @teams.each do |id, team| %>
+    <li><%= team[:name] %> (<%= team[:members] %>)</li>
+  <% end %>
+</ul>
