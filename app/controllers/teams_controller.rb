@@ -6,7 +6,7 @@ class TeamsController < ApplicationController
     Team_3 => { name: "Shore Whores", members: ["Troy Huzulak", "Derek Ruediger", "Jared Wielkanoc", "Pat Therrien"]},
     Team_4 => { name: "House Crew", members: ["Bacon Forte", "Grayson Castell", "Jack Tisdell", "Wiliiam Ducasse"]},
     Team_5 => { name: "Middle-Aged", members: ["Carlos Da Costa Frias", "Thomas Dayon", "Trevor Lee", "Fred St-Amour"]},
-    Team_6 => { name: "Peter Corrado's Foursome", members: ["Alex Corrado", "David Gao", "Michel Toutoungy", "Ryan Kucera"]}
+    Team_6 => { name: "Peter Corrado's Party Foursome", members: ["Alex Corrado", "David Gao", "Michel Toutoungy", "Ryan Kucera"]}
   }
 
   def index
