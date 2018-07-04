@@ -18,4 +18,9 @@ class TeamsController < ApplicationController
     #   team[:members] == params [:member_name]
     # end
   end
+
+  def create
+
+    puts "Create teams in DB"
+  end
 end
