@@ -19,6 +19,11 @@ class TeamsController < ApplicationController
     # end
   end
 
+  def show
+    # Uncomment once you understand the Params shit
+    # @team = TEAMS[params[:id].to_i]
+  end
+
   def create
 
     puts "Create teams in DB"
