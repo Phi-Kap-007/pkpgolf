@@ -13,6 +13,7 @@ class TeamsController < ApplicationController
   def show
     # Uncomment once you understand the Params shit
     # @team = TEAMS[params[:id].to_i]
+    @team = Team.find(params[:id])
   end
 
   def new
