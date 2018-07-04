@@ -1,0 +1,29 @@
+<%= form_for @team do |f| %>
+  <%= f.label :name, "Enter a Name" %>
+  <%= f.text_field :name %>
+  <%= f.label :tee_off_time, "Enter Tee-Off Time" %>
+  <%= f.text_field :tee_off_time %>
+  <%= f.label :member, "Enter Members" %>
+  <%= f.text_field :member %>
+<% end %>
+
+
+
+<!-- Hard-Coded Version of Form below, great for understanding the concept (Rails CRUD Video around 55 minute mark) -->
+
+<!-- <form action="/restaurants" method="post">
+
+  <label for="name">Enter Name</label>
+  <input type="text" type="team[name]">
+
+  <label for="name">Enter Tee-Off Time</label>
+  <input type="text" type="team[tee_off_time]">
+
+  <label for="name">Enter Member</label>
+  <input type="text" type="team[members]">
+
+  <input type="submit">
+
+
+
+</form> -->

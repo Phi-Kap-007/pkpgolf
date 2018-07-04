@@ -12,9 +12,12 @@
 
 ActiveRecord::Schema.define(version: 2018_07_04_182158) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "teams", force: :cascade do |t|
     t.string "name"
-    t.integer "tee_off_time"
+    t.time "tee_off_time"
     t.integer "score"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

@@ -6,11 +6,10 @@
 <ul>
   <% @teams.each do |team| %>
     <li>
-      <h2><%= team[:name] %></h2>
+      <h2><%= link_to team.name, team_path(team) %></h2>
       <p><%= team[:members] %></p>
       <p><%= team[:tee_off_time] %></p>
       <p><%= team[:score] %></p>
-    <%= link_to "More Details", team_path(team) %>
     </li>
     <% end %>
 </ul>
