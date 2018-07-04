@@ -3,7 +3,9 @@
 one:
   name: MyString
   tee_off_time: 1
+  score: 1
 
 two:
   name: MyString
   tee_off_time: 1
+  score: 1
