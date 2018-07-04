@@ -1,4 +1,4 @@
-<h1>Teams</h1>
+<h1>All Teams</h1>
 
 <!-- Insert form below if/when necessary -->
 
@@ -7,7 +7,8 @@
   <% @teams.each do |id, team| %>
     <li>
       <%= link_to team[:name], team_path(id) %>
-      (<%= team[:members] %>)
+      (<%= team[:tee_off_time] %>)
+      <%= team[:score] %>
     </li>
     <% end %>
 </ul>
