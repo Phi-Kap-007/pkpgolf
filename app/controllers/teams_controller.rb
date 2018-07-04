@@ -8,7 +8,7 @@ class TeamsController < ApplicationController
     3 => { name: "Shore Whores", members: ["Troy Huzulak", "Derek Ruediger", "Jared Wielkanoc", "Pat Therrien"]},
     4 => { name: "House Crew", members: ["Bacon Forte", "Grayson Castell", "Jack Tisdell", "William Ducasse"]},
     5 => { name: "Middle-Aged", members: ["Carlos Da Costa Frias", "Thomas Dayon", "Trevor Lee", "Fred St-Amour"]},
-    6 => { name: "Peter Corrado's Party Foursome", members: ["Alex Corrado", "David Gao", "Michel Toutoungy", "Ryan Kucera"]}
+    6 => { name: "Peter Corrado's Party of 4", members: ["Alex Corrado", "David Gao", "Michel Toutoungy", "Ryan Kucera"]}
   }
 
   def index
