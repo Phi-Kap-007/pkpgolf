@@ -1,10 +1,7 @@
 <h1>Teams</h1>
 
-<form action="/teams" method="get">
-  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-  <input type="text" name="team_name" placeholder="Find Team">
-  <input type="submit">
-</form>
+<!-- Insert form here if/when necessary -->
+
 
 <ul>
   <% @teams.each do |id, team| %>
