@@ -6,8 +6,8 @@
 <ul>
   <% @teams.each do |id, team| %>
     <li>
-      <%= link_to team[:name], team_path() %>
-      <%= team[:name] %> <%= team[:members] %>
+      <%= link_to team[:name], team_path(id) %>
+      (<%= team[:members] %>)
     </li>
     <% end %>
 </ul>
