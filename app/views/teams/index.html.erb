@@ -4,11 +4,13 @@
 
 
 <ul>
-  <% @teams.each do |id, team| %>
+  <% @teams.each do |team| %>
     <li>
-      <%= link_to team[:name], team_path(id) %>
-      (<%= team[:tee_off_time] %>)
-      <%= team[:score] %>
+      <h2><%= team[:name] %></h2>
+      <p><%= team[:members] %></p>
+      <p><%= team[:tee_off_time] %></p>
+      <p><%= team[:score] %></p>
+    <%= link_to "More Details", team_path(team) %>
     </li>
     <% end %>
 </ul>
