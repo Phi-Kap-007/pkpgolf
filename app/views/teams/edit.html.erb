@@ -1,4 +1,16 @@
-<form action="/teams/1" method="post">
+<% @team = Team.new %>
+
+<%= form_for @team do |f| %>
+  <%= f.label :name, "Enter a Name" %>
+  <%= f.text_field :name %>
+  <%= f.label :tee_off_time, "Enter Tee-Off Time" %>
+  <%= f.text_field :tee_off_time %>
+  <%= f.label :members, "Enter Members" %>
+  <%= f.text_field :members %>
+<% end %>
+
+
+<!-- <form action="/teams/1" method="post">
 
   <label for="name">Enter Name</label>
   <input type="text" type="team[name]" value="Peter Corrado, Party of 4">
@@ -12,5 +24,5 @@
   <input type="submit">
 
 
-
 </form>
+ -->

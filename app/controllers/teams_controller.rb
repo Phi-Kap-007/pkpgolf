@@ -17,15 +17,15 @@ class TeamsController < ApplicationController
   end
 
   def new
-
+    @team = Team.new
   end
 
   def create
 
-    puts "Create teams in DB"
   end
 
   def edit
+    @team = Team.find(params[:id])
   end
 
   def update
