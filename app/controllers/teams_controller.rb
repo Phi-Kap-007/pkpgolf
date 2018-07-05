@@ -1,10 +1,6 @@
 class TeamsController < ApplicationController
 
-# Put teams in Database when the time is right
-
-  # TEAMS = {
-
-  # }
+  before_action :set_team, only: [:show, :edit, :update, :destroy]
 
   def index
     @teams = Team.all
@@ -13,7 +9,6 @@ class TeamsController < ApplicationController
   def show
     # Uncomment once you understand the Params shit
     # @team = TEAMS[params[:id].to_i]
-    @team = Team.find(params[:id])
   end
 
   def new
@@ -26,17 +21,15 @@ class TeamsController < ApplicationController
   end
 
   def edit
-    @team = Team.find(params[:id])
+
   end
 
   def update
-    @team = Team.find(params[:id])
     @team.update(team_params)
     redirect_to team_path(@team)
   end
 
   def destroy
-    @team = Team.find(params[:id])
     @team.destroy
     redirect_to teams_path
   end
@@ -45,6 +38,10 @@ class TeamsController < ApplicationController
 
   def team_params
     params.require(:team).permit(:name, :members, :tee_off_time)
+  end
+
+  def set_team
+    @team = Team.find(params[:id])
   end
 
 end
