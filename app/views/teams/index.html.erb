@@ -10,6 +10,7 @@
       <p><%= team[:members] %></p>
       <p><%= team[:tee_off_time] %></p>
       <p><%= team[:score] %></p>
+      <%= link_to "Remove Team", team_path(team), method: :delete %>
     </li>
     <% end %>
 </ul>
