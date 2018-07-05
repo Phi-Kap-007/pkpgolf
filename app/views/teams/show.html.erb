@@ -1,0 +1,11 @@
+<h1><%= @team[:name] %></h1>
+
+<ul>
+  <p>Members: <%= @team[:members] %></p>
+  <p>Tee-Off Time: <%= @team[:tee_off_time] %></p>
+  <p>Score: <%= @team[:score] %></p>
+  <%= link_to "Remove Team", team_path(@team), method: :delete %>
+</ul>
+
+
+<%= link_to "Back to all teams", teams_path %>
