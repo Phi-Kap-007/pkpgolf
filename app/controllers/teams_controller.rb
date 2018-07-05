@@ -21,7 +21,8 @@ class TeamsController < ApplicationController
   end
 
   def create
-
+    Team.create(team_params)
+    redirect_to teams_path
   end
 
   def edit
@@ -29,9 +30,18 @@ class TeamsController < ApplicationController
   end
 
   def update
-
+    @team = Team.find(params[:id])
+    @team.update(team_params)
+    redirect_to team_path(@team)
   end
 
   def destroy
   end
+
+  private
+
+  def team_params
+    params.require(:team).permit(:name, :members, :tee_off_time)
+  end
+
 end
