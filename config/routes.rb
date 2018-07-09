@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
 
+  get 'brothers/index'
+  get 'brothers/show'
+  get 'brothers/new'
+  get 'brothers/create'
+  get 'brothers/edit'
+  get 'brothers/update'
+  get 'brothers/destroy'
   # Generic syntax:
   # verb 'path', to: 'controller#action', as: :route_name
 
