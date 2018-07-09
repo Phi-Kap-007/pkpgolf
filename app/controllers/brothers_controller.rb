@@ -31,10 +31,4 @@ class BrothersController < ApplicationController
       # @brother.destroy
       # redirect_to brothers_path
   end
-
-  private
-
-  def
-
-  end
 end
