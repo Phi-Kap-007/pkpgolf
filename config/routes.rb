@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+
   # Generic syntax:
   # verb 'path', to: 'controller#action', as: :route_name
 
@@ -11,7 +12,7 @@ Rails.application.routes.draw do
   # Read one team
   get 'teams/:id', to: 'teams#show', as: :team
 
-  # create one team (2 Requests)
+  # Create one team (2 Requests)
     # 1st request form
     # 2nd request params
   get 'teams/new', to: 'teams#new'
@@ -19,7 +20,7 @@ Rails.application.routes.draw do
 
   # update one team
   get 'teams/:id/edit', to: 'teams#edit'
-  patch "teams/:id", to: 'teams#update'
+  patch 'teams/:id', to: 'teams#update'
 
   # delete one team
   delete 'teams/:id', to: 'teams#destroy'
@@ -27,6 +28,24 @@ Rails.application.routes.draw do
 
   # get 'about', to: 'pages#about', as: :about
   # get 'contact', to: 'pages#contact', as: :contact
+
+
+  # Read all bros
+  get 'brothers', to: 'brothers#index'
+
+  # Read one bro
+  get 'brothers/:id', to: 'brothers#show', as: :brother
+
+  # Create one bro
+  get 'brothers/new', to: 'brothers/#new'
+  post 'brothers', to: 'brothers#create'
+
+  # Update one bro
+  get 'brothers/:id/edit', to: 'brothers#edit'
+  patch 'brothers/:id', to: "brothers#update"
+
+  # Delete one bro
+  get 'brothers/:id', to: 'brothers#destroy'
 
 
 
