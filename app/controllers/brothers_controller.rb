@@ -3,6 +3,4 @@ class BrothersController < ApplicationController
     @brothers = Brother.all
     # Create Function that lists brothers scores: the lowest goes on top.
   end
-
-
 end
