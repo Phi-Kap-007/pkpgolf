@@ -8,14 +8,15 @@ Rails.application.routes.draw do
   # Read all teams
   get 'teams', to: 'teams#index'
 
-  # Read one team
-  get 'teams/:id', to: 'teams#show', as: :team
-
   # create one team (2 Requests)
     # 1st request form
     # 2nd request params
   get 'teams/new', to: 'teams#new'
   post 'teams', to: 'teams#create'
+
+  # Read one team
+  get 'teams/:id', to: 'teams#show', as: :team
+
 
   # update one team
   get 'teams/:id/edit', to: 'teams#edit'

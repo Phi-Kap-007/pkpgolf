@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2018_07_04_182158) do
 
   create_table "teams", force: :cascade do |t|
     t.string "name"
-    t.time "tee_off_time"
+    t.integer "tee_off_time"
     t.integer "score"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
