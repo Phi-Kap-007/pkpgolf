@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  # Uncomment line below to simplify routing: taslk to Martin first. Check CRUD video at 31 min mark
+  #resources :teams
 
   # Generic syntax:
   # verb 'path', to: 'controller#action', as: :route_name
@@ -11,7 +13,7 @@ Rails.application.routes.draw do
 
     # 1st request form
     # 2nd request params
-  get 'teams/new', to: 'teams#new'
+  get 'teams/new', to: 'teams#new', as: :new_team
   post 'teams', to: 'teams#create'
 
   # Read one team
@@ -19,7 +21,7 @@ Rails.application.routes.draw do
 
 
   # update one team
-  get 'teams/:id/edit', to: 'teams#edit'
+  get 'teams/:id/edit', to: 'teams#edit', as: :edit_team
   patch 'teams/:id', to: 'teams#update'
 
   # delete one team
@@ -30,21 +32,21 @@ Rails.application.routes.draw do
   # get 'contact', to: 'pages#contact', as: :contact
 
 
-  # Read all bros
+  # # Read all bros
   get 'brothers', to: 'brothers#index'
 
-  # Read one bro
+  # # Read one bro
   get 'brothers/:id', to: 'brothers#show', as: :brother
 
-  # Create one bro
+  # # Create one bro
   get 'brothers/new', to: 'brothers/#new'
   post 'brothers', to: 'brothers#create'
 
-  # Update one bro
+  # # Update one bro
   get 'brothers/:id/edit', to: 'brothers#edit'
   patch 'brothers/:id', to: "brothers#update"
 
-  # Delete one bro
+  # # Delete one bro
   get 'brothers/:id', to: 'brothers#destroy'
 
 
