@@ -12,11 +12,12 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
 
     <h1>The Teams</h1>
 
+    <%= render "shared/navbar" %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <%= yield %>
 
     <footer>
