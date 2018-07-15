@@ -36,19 +36,6 @@ Rails.application.routes.draw do
   # # Read all bros
   get 'brothers', to: 'brothers#index'
 
-  # # Read one bro
-  get 'brothers/:id', to: 'brothers#show', as: :brother
-
-  # # Create one bro
-  get 'brothers/new', to: 'brothers/#new'
-  post 'brothers', to: 'brothers#create'
-
-  # # Update one bro
-  get 'brothers/:id/edit', to: 'brothers#edit'
-  patch 'brothers/:id', to: "brothers#update"
-
-  # # Delete one bro
-  get 'brothers/:id', to: 'brothers#destroy'
 
 
 
