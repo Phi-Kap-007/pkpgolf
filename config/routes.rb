@@ -7,7 +7,8 @@ Rails.application.routes.draw do
   # Generic syntax:
   # verb 'path', to: 'controller#action', as: :route_name
 
-  root to: 'pages#home'
+  #root to: 'pages#home'
+  root to: 'teams#index'
 
   # Read all teams
   get 'teams', to: 'teams#index'
