@@ -43,6 +43,7 @@ gem 'rails-ujs', '~> 0.1.0'
 gem 'simple_form'
 gem 'webpacker', '~> 3.5'
 
+gem 'devise'
 
 
 group :development, :test do
