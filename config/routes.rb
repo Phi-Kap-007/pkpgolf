@@ -34,8 +34,11 @@ Rails.application.routes.draw do
   # get 'contact', to: 'pages#contact', as: :contact
 
 
-  # # Read all bros
+  # Read all bros
   get 'brothers', to: 'brothers#index'
+
+  # Show individual brothers' scores
+  get 'brothers/:id', to: 'brothers#show', as: :brother
 
 
 
