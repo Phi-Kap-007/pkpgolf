@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_15_020855) do
+ActiveRecord::Schema.define(version: 2018_07_17_163815) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,26 @@ ActiveRecord::Schema.define(version: 2018_07_15_020855) do
     t.integer "score"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "score_hole_1"
+    t.integer "score_hole_2"
+    t.integer "score_hole_3"
+    t.integer "score_hole_4"
+    t.integer "score_hole_5"
+    t.integer "score_hole_6"
+    t.integer "score_hole_7"
+    t.integer "score_hole_8"
+    t.integer "score_hole_9"
+    t.integer "score_first_half"
+    t.integer "score_hole_10"
+    t.integer "score_hole_11"
+    t.integer "score_hole_12"
+    t.integer "score_hole_13"
+    t.integer "score_hole_14"
+    t.integer "score_hole_15"
+    t.integer "score_hole_16"
+    t.integer "score_hole_17"
+    t.integer "score_hole_18"
+    t.integer "score_second_half"
   end
 
   create_table "teams", force: :cascade do |t|
@@ -31,7 +51,10 @@ ActiveRecord::Schema.define(version: 2018_07_15_020855) do
     t.integer "score"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "members"
+    t.string "member_1"
+    t.string "member_2"
+    t.string "member_3"
+    t.string "member_4"
   end
 
   create_table "users", force: :cascade do |t|
