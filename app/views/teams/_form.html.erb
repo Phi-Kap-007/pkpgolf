@@ -1,16 +1,24 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4 col-sm-offset-4">
+      <%= form_for @team do |f| %>
+        <%= f.label :name, "Enter a Name" %>
+        <%= f.text_field :name %>
+        <%= f.label :tee_off_time, "Enter Tee-Off Time" %>
+        <%= f.text_field :tee_off_time %>
+        <%= f.label :member_one, "First Member" %>
+        <%= text_field_tag :member_one %>
+        <%= label_tag :member_two, "Second Member" %>
+        <%= text_field_tag :member_two %>
+        <%= label_tag :member_three, "Third Member" %>
+        <%= text_field_tag :member_three %>
+        <%= label_tag :member_four, "Fourth Member" %>
+        <%= text_field_tag :member_four %>
+        <%= label_tag :score, "Score" %>
+        <%= text_field_tag :score %>
+        <%= f.submit %>
+      <% end %>
+    </div>
+  </div>
+</div>
 
-<%= form_for @team do |f| %>
-  <%= f.label :name, "Enter a Name" %>
-  <%= f.text_field :name %>
-  <%= f.label :tee_off_time, "Enter Tee-Off Time" %>
-  <%= f.text_field :tee_off_time %>
-  <%= label_tag :member_one %>
-  <%= text_field_tag :member_one %>
-  <%= label_tag :member_two %>
-  <%= text_field_tag :member_two %>
-  <%= label_tag :member_three %>
-  <%= text_field_tag :member_three %>
-  <%= label_tag :member_four %>
-  <%= text_field_tag :member_four %>
-  <%= f.submit %>
-<% end %>
