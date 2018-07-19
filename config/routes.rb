@@ -21,14 +21,15 @@ Rails.application.routes.draw do
   # Read one team
   get 'teams/:id', to: 'teams#show', as: :team
 
-
   # update one team
   get 'teams/:id/edit', to: 'teams#edit', as: :edit_team
   patch 'teams/:id', to: 'teams#update'
 
-  # delete one team
+  # Delete one team
   delete 'teams/:id', to: 'teams#destroy'
 
+  # Show all teams in descending order
+  get 'teams', to: 'teams#leaderboard', as: :leaderboard
 
   # get 'about', to: 'pages#about', as: :about
   # get 'contact', to: 'pages#contact', as: :contact

@@ -34,10 +34,14 @@ class TeamsController < ApplicationController
     redirect_to teams_path
   end
 
+  def leaderboard
+
+  end
+
   private
 
   def team_params
-    params.require(:team).permit(:name, :members, :tee_off_time)
+    params.require(:team).permit(:name, :member_1, :member_2, :member_3, :member_4, :tee_off_time)
   end
 
   def set_team
