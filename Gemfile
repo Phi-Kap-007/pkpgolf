@@ -43,8 +43,13 @@ gem 'rails-ujs', '~> 0.1.0'
 gem 'simple_form'
 gem 'webpacker', '~> 3.5'
 
+# Login gems
 gem 'devise'
 
+# Leaderboard gems
+gem 'leaderboard'
+gem 'cells'
+gem 'kaminari'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
