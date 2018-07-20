@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   root to: 'teams#index'
 
   # Leaderboard routes
-  namespace :teams do
+  namespace :brothers do
     resources :leaderboard
   end
 
@@ -25,9 +25,6 @@ Rails.application.routes.draw do
   # get 'about', to: 'pages#about', as: :about
   # get 'contact', to: 'pages#contact', as: :contact
 
-  namespace :brothers do
-    resources :leaderboard
-  end
 
 
 
