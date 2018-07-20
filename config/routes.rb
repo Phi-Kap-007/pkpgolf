@@ -13,18 +13,17 @@ Rails.application.routes.draw do
   #root to: 'pages#home'
   root to: 'teams#index'
 
+  # Leaderboard routes
+  namespace :teams do
+    resources :leaderboard
+  end
+
   # CRUD routes for teams and brothers
   resources :teams, :brothers
 
 
   # get 'about', to: 'pages#about', as: :about
   # get 'contact', to: 'pages#contact', as: :contact
-
-
-  # Leaderboard routes
-  namespace :teams do
-    resources :leaderboard
-  end
 
   namespace :brothers do
     resources :leaderboard
