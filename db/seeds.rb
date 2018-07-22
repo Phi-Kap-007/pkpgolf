@@ -24,11 +24,3 @@ Team.create(name: "Alcoholics Anonymous", member_1: "Dario Baccalaro", member_2:
 
 puts 'Bro best golf tournament bro!'
 
-# This has the Time zone thing, uncomment when clear
-# Team.create(name: "Peter Corrado, Party of 4", members: ["Alex Corrado", "David Gao", "Ryan Kucera", "Michel Toutoungy"], tee_off_time: Time.new(2018, 7, 7, 9, 30, 0), score: 0)
-# Team.create(name: "SP Caravan", members: ["Christian Chan", "Ardavan Hosseini", "Gianni Macri", "John-Michael Aita"], tee_off_time: Time.new(2018, 7, 7, 9, 24, 0), score: 0)
-# Team.create(name: "Shore Whores", members: ["Troy Huzulak", "Derek Ruediger", "Jared Wielkanoc", "Pat Therrien"], tee_off_time: Time.new(2018, 7, 7, 9, 16, 0), score: 0)
-# Team.create(name: "Golden Oldies", members: ["Chris Mapp", "Mark H.", "Jim Ross", "Bill Gregory"], tee_off_time: Time.new(2018, 7, 7, 9, 38, 0), score: 0)
-# Team.create(name: "House Crew", members: ["Bacon Forte", "Grayson Castell", "Jack Tisdell", "William Ducasse"], tee_off_time: Time.new(2018, 7, 7, 9, 46, 0), score: 0)
-# Team.create(name: "Middle-Aged", members: ["Carlos Da Costa Frias", "Thomas Dayon", "Trevor Lee", "Fred St-Amour"], tee_off_time: Time.new(2018, 7, 7, 9, 54, 0), score: 0)
-
