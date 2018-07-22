@@ -14,12 +14,12 @@ Rails.application.routes.draw do
   root to: 'teams#index'
 
   # Leaderboard routes
-  namespace :brothers do
+  namespace :members do
     resources :leaderboard
   end
 
-  # CRUD routes for teams and brothers
-  resources :teams, :brothers
+  # CRUD routes for teams and members
+  resources :teams, :members
 
 
   # get 'about', to: 'pages#about', as: :about
