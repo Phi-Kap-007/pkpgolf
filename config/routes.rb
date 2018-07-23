@@ -1,8 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'leaderboards/show'
-  get 'leaderboards/paginate'
-  get 'leaderboards/entry_service'
   devise_for :users
   # Uncomment line below to simplify routing: talk to Martin first. Check CRUD video at 31 min mark
   #resources :teams
@@ -13,13 +10,9 @@ Rails.application.routes.draw do
   #root to: 'pages#home'
   root to: 'teams#index'
 
-  # Leaderboard routes
-  namespace :members do
-    resources :leaderboard
-  end
-
   # CRUD routes for teams and members
-  resources :teams, :members
+  resources :teams, :members, :entries
+  get 'leaderboards/show'
 
 
   # get 'about', to: 'pages#about', as: :about

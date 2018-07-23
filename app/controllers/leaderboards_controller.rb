@@ -4,6 +4,7 @@ class LeaderboardsController < ApplicationController
   def show
     @lb = Boards.default_leaderboard
     @entries = entry_service.execute(query_options)
+
     respond_to do |format|
       format.html do
         paginate
@@ -12,6 +13,12 @@ class LeaderboardsController < ApplicationController
         render json: @entries
       end
     end
+  end
+
+  def query_options
+    @limit = [params.fetch(:limit, 10).to_i, 100].min
+    @page = params.fetch(:page, 1).to_i
+    { page: @page, limit: @limit }
   end
 
   def paginate

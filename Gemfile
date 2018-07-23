@@ -48,7 +48,8 @@ gem 'devise'
 
 # Leaderboard gems
 gem 'leaderboard'
-gem 'cells'
+gem 'cells', '3.11.2'
+# gem 'cells-erb'
 gem 'kaminari'
 
 group :development, :test do
