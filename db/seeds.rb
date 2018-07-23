@@ -7,11 +7,17 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 puts 'Cleaning database...'
+Member.destroy_all
 Team.destroy_all
 
 puts 'Creating teams...'
 
-Team.create(name: "Golden Oldies", members: [[first_name: "Chris" last_name: "Mapp"], [first_name: "Mark" last_name: "Uchwat"], [first_name: "Jim" last_name: "Ross"], [first_name: "Bill" last_name: "Gregory"]], tee_off_time: 930, score: 0)
+golden_oldies = Team.create!(name: "Golden Oldies", tee_off_time: 930, score: 0)
+Member.create!(team: golden_oldies, first_name: "Chris", last_name: "Mapp")
+Member.create!(team: golden_oldies, first_name: "Mark", last_name: "Uchwat")
+Member.create!(team: golden_oldies, first_name: "Jim", last_name: "Ross")
+Member.create!(team: golden_oldies, first_name: "Bill", last_name: "Gregory")
+
 # Team.create(name: "Uchwat Family", members: ["Unknown 1" "Unknown 2" "Unknown 3" "Unknown 4"], tee_off_time: 938, score: 0)
 # Team.create(name: "The Organizers", members: ["Arthur Burczak" "Sebastien Jacques" "Derek Pickford" "LJ Aguinaga"], tee_off_time: 946, score: 0)
 # Team.create(name: "Mish-Mash", members: ["Alex Corrado" "Carlos Da Costa Frias" "Cody Lieberman" "Colin Mackenzie"], tee_off_time: 954, score: 0)
@@ -21,6 +27,7 @@ Team.create(name: "Golden Oldies", members: [[first_name: "Chris" last_name: "Ma
 # Team.create(name: "SP Caravan, The Sequel", members: ["Andrew Brand" "Arun Aggarwal-Schifellite" "Christian Chan" "Scott McGee"], tee_off_time: 1026, score: 0)
 # Team.create(name: "House Crew", members: ["James Fraser" "Ryan Kucera" "Jack Tisdell" "William Ducasse"], tee_off_time: 1034, score: 0)
 # Team.create(name: "Alcoholics Anonymous", members: ["Dario Baccalaro" "Shane Chappus" "Noah Gareau" "N/A"], tee_off_time: 1042, score: 0)
+
 
 # Team.create(name: "Golden Oldies", member_1: "Chris Mapp", member_2: "Mark Uchwat", member_3: "Jim Ross", member_4: "Bill Gregory", tee_off_time: 930, score: 0)
 # Team.create(name: "Uchwat Family", member_1: "Unknown 1", member_2: "Unknown 2", member_3: "Unknown 3", member_4: "Unknown 4", tee_off_time: 938, score: 0)
