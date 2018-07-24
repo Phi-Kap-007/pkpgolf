@@ -1,0 +1,8 @@
+<tr>
+  <td style='width: 10%'><%= @rank %></td>
+  <td><%= @name %></td>
+  <td style='width: 10%'>
+    <entry-form entry='<%= @entry.to_json %>'></entry-form>
+  </td>
+  <td style="width: 10%"><%# cell :entry, :delete_form, entry: @entry %></td>
+</tr>

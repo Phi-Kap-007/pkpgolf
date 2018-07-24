@@ -1,38 +1,38 @@
 require 'test_helper'
 
-class BrothersControllerTest < ActionDispatch::IntegrationTest
+class MembersControllerTest < ActionDispatch::IntegrationTest
   test "should get index" do
-    get brothers_index_url
+    get members_index_url
     assert_response :success
   end
 
   test "should get show" do
-    get brothers_show_url
+    get members_show_url
     assert_response :success
   end
 
   test "should get new" do
-    get brothers_new_url
+    get members_new_url
     assert_response :success
   end
 
   test "should get create" do
-    get brothers_create_url
+    get members_create_url
     assert_response :success
   end
 
   test "should get edit" do
-    get brothers_edit_url
+    get members_edit_url
     assert_response :success
   end
 
   test "should get update" do
-    get brothers_update_url
+    get members_update_url
     assert_response :success
   end
 
   test "should get destroy" do
-    get brothers_destroy_url
+    get members_destroy_url
     assert_response :success
   end
 
