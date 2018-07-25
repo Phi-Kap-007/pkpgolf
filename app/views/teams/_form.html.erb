@@ -1,14 +1,14 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-4 col-sm-offset-4">
-      <%= form_for @team do |f| %>
+      <%= form_for @team  do |f| %>
         <%= f.label :name, "Enter a Name" %>
-        <%= f.text_field :name %>
+        <%= f.text_field :name %><br>
         <%= f.label :tee_off_time, "Enter Tee-Off Time" %>
-        <%= f.text_field :tee_off_time %>
+        <%= f.text_field :tee_off_time %><br>
 
         <%= f.label :members, "Enter Members" %>
-        <%= f.text_field :members %>
+        <%= f.text_field :members %><br>
 
         <%= f.submit %>
       <% end %>
