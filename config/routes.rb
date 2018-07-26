@@ -10,8 +10,8 @@ Rails.application.routes.draw do
   #root to: 'pages#home'
   root to: 'teams#index'
 
-  # CRUD routes for teams and members
-  resources :teams, :members, :entries
+  # CRUD routes for teams and users
+  resources :teams, :users, :entries
   get 'leaderboards/show'
 
 

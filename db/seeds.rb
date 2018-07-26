@@ -81,8 +81,6 @@ User.create!(team: alco_anonymous, first_name: "Dario", last_name: "Baccalaro", 
 User.create!(team: alco_anonymous, first_name: "Shane", last_name: "Chappus", email: "shaneyney@gmail.com", password: "123456")
 User.create!(team: alco_anonymous, first_name: "Noah", last_name: "Gareau", email: "garnoah@gmail.com", password: "123456")
 
-# Team.create(name: "Alcoholics Anonymous", members: ["Dario Baccalaro" "Shane Chappus" "Noah Gareau" "N/A"], tee_off_time: 1042, score: 0)
-
 puts 'Teams Loaded'
 puts 'Keep it clean, now come out golfing!'
 
