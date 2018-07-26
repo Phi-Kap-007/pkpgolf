@@ -1,7 +1,7 @@
-class MembersController < ApplicationController
+class UsersController < ApplicationController
   def index
-    @members = Member.all
-    # Create Function that lists members scores: the lowest goes on top.
+    @users = User.all
+    # Create Function that lists users scores: the lowest goes on top.
   end
 
   def show
@@ -9,13 +9,13 @@ class MembersController < ApplicationController
   end
 
   def create
-    @member = Member.create(member_params)
+    @user = User.create(user_params)
     redirect_to teams_path
   end
 
   private
 
-  def member_params
-    params.require(:member).permit(:first_name, :last_name)
+  def user_params
+    params.require(:user).permit(:first_name, :last_name)
   end
 end
