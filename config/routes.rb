@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
 
   devise_for :users
-  # Uncomment line below to simplify routing: talk to Martin first. Check CRUD video at 31 min mark
   #resources :teams
 
   # Generic syntax:
