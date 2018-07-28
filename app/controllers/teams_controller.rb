@@ -35,10 +35,6 @@ class TeamsController < ApplicationController
     redirect_to teams_path
   end
 
-  def leaderboard
-
-  end
-
   private
 
   def team_params
