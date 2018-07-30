@@ -7,8 +7,7 @@ class TeamsController < ApplicationController
   end
 
   def show
-    # Uncomment once you understand the Params shit
-    # @team = TEAMS[params[:id].to_i]
+
   end
 
   def new
@@ -22,7 +21,8 @@ class TeamsController < ApplicationController
   end
 
   def edit
-
+    # Might be issue
+    #@team = Team.edit(team_params)
   end
 
   def update
@@ -35,14 +35,10 @@ class TeamsController < ApplicationController
     redirect_to teams_path
   end
 
-  def leaderboard
-
-  end
-
   private
 
   def team_params
-    params.require(:team).permit(:name, :members, :tee_off_time)
+    params.require(:team).permit(:name, :tee_off_time, :first_name, :last_name)
   end
 
   def set_team

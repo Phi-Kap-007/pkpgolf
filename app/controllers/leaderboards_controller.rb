@@ -24,7 +24,7 @@ class LeaderboardsController < ApplicationController
   def paginate
     pager = Kaminari.paginate_array(
       @entries,
-      total_count: @lb.total_members)
+      total_count: @lb.total_users)
 
     @page_array = pager.page(@page).per(@limit)
   end

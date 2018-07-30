@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
 
   devise_for :users
-  # Uncomment line below to simplify routing: talk to Martin first. Check CRUD video at 31 min mark
   #resources :teams
 
   # Generic syntax:
@@ -10,8 +9,8 @@ Rails.application.routes.draw do
   #root to: 'pages#home'
   root to: 'teams#index'
 
-  # CRUD routes for teams and members
-  resources :teams, :members, :entries
+  # CRUD routes for teams and users
+  resources :teams, :users, :entries
   get 'leaderboards/show'
 
 

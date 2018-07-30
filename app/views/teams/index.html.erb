@@ -9,8 +9,8 @@
   <% @teams.each do |team| %>
     <li>
       <h2><%= link_to team.name, team_path(team) %></h2>
-      <% team.members.each_with_index do |member, index| %>
-      <p> Member <%= index + 1 %>: <%= member.first_name %> <%= member.last_name %> </p>
+      <% team.users.each_with_index do |user, index| %>
+      <p> Member <%= index + 1 %>: <%= user.first_name %> <%= user.last_name %> </p>
       <% end %>
       <p>Tee-Off Time: <%= team[:tee_off_time] %></p>
       <p>Score: <%= team[:score] %></p>

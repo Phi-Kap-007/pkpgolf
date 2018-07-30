@@ -1,7 +1,7 @@
 class EntryCell < Cell::Rails
   def show(args)
     @entry = args[:entry]
-    @name = @entry[:member]
+    @name = @entry[:user]
     @rank = @entry[:rank]
     @score = @entry[:score]
     render

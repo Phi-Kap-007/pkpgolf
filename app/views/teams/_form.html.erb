@@ -2,14 +2,19 @@
   <div class="row">
     <div class="col-sm-4 col-sm-offset-4">
       <%= form_for @team  do |f| %>
-        <%= f.label :name, "Enter a Name" %>
+        <%= f.label :name, "Enter Team Name" %>
         <%= f.text_field :name %><br>
         <%= f.label :tee_off_time, "Enter Tee-Off Time" %>
         <%= f.text_field :tee_off_time %><br>
 
-        <%= f.label :members, "Enter Members" %>
-        <%= f.text_field :members %><br>
-
+        <%= f.label :users, "Select Member 1" %>
+        <%= f.collection_select(:users, User.all, :id, :last_name) %><br>
+        <%= f.label :users, "Select Member 2" %>
+        <%= f.collection_select(:users, User.all, :id, :last_name) %><br>
+        <%= f.label :users, "Select Member 3" %>
+        <%= f.collection_select(:users, User.all, :id, :last_name) %><br>
+        <%= f.label :users, "Select Member 4" %>
+        <%= f.collection_select(:users, User.all, :id, :last_name) %><br>
         <%= f.submit %>
       <% end %>
     </div>
