@@ -21,7 +21,8 @@ class TeamsController < ApplicationController
   end
 
   def edit
-
+    # Might be issue
+    #@team = Team.edit(team_params)
   end
 
   def update
@@ -37,7 +38,7 @@ class TeamsController < ApplicationController
   private
 
   def team_params
-    params.require(:team).permit(:name, :tee_off_time, :first_name, :last_name,)
+    params.require(:team).permit(:name, :tee_off_time, :first_name, :last_name)
   end
 
   def set_team

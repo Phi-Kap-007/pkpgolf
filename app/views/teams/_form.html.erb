@@ -8,13 +8,13 @@
         <%= f.text_field :tee_off_time %><br>
 
         <%= f.label :users, "Select Member 1" %>
-        <%= f.collection_select(:users, User.all, :first_name, :last_name) %><br>
+        <%= f.collection_select(:users, User.all, :id, :last_name) %><br>
         <%= f.label :users, "Select Member 2" %>
-        <%= f.collection_select(:users, User.all, :first_name, :last_name) %><br>
+        <%= f.collection_select(:users, User.all, :id, :last_name) %><br>
         <%= f.label :users, "Select Member 3" %>
-        <%= f.collection_select(:users, User.all, :first_name, :last_name) %><br>
+        <%= f.collection_select(:users, User.all, :id, :last_name) %><br>
         <%= f.label :users, "Select Member 4" %>
-        <%= f.collection_select(:users, User.all, :first_name, :last_name) %><br>
+        <%= f.collection_select(:users, User.all, :id, :last_name) %><br>
         <%= f.submit %>
       <% end %>
     </div>
