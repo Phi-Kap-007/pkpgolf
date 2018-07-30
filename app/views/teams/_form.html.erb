@@ -7,9 +7,6 @@
         <%= f.label :tee_off_time, "Enter Tee-Off Time" %>
         <%= f.text_field :tee_off_time %><br>
 
-        <%= f.label :users, "Enter First Name" %>
-        <%= f.text_field :users %><br>
-
         <%= f.label :users, "Select Member 1" %>
         <%= f.collection_select(:users, User.all, :first_name, :last_name) %><br>
         <%= f.label :users, "Select Member 2" %>
