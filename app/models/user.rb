@@ -9,6 +9,7 @@ class User < ApplicationRecord
   # belongs_to :team
   validates :email, presence: true
   validates :encrypted_password, presence: true
+  validates :email, uniqueness: true
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
