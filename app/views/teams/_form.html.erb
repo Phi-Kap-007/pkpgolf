@@ -10,14 +10,22 @@
         <%= f.label :score, "Enter Team Score" %>
         <%= f.text_field :score %><br>
 
-        <%= f.label :users, "Select Member 1" %>
-        <%= f.collection_select(:users, User.all, :id, :last_name) %><br>
-        <%= f.label :users, "Select Member 2" %>
-        <%= f.collection_select(:users, User.all, :id, :last_name) %><br>
-        <%= f.label :users, "Select Member 3" %>
-        <%= f.collection_select(:users, User.all, :id, :last_name) %><br>
-        <%= f.label :users, "Select Member 4" %>
-        <%= f.collection_select(:users, User.all, :id, :last_name) %><br>
+        <%= label_tag :member_1, "Select Member 1" %>
+        <%= select_tag :member_1, options_from_collection_for_select(@users_without_a_team, :id, :full_name, @team.users.first&.id) %>
+        <br>
+
+        <%= label_tag :member_2, "Select Member 2" %>
+        <%= select_tag :member_2, options_from_collection_for_select(@users_without_a_team, :id, :full_name, @team.users.second&.id) %>
+        <br>
+
+        <%= label_tag :member_3, "Select Member 3" %>
+        <%= select_tag :member_3, options_from_collection_for_select(@users_without_a_team, :id, :full_name, @team.users.third&.id) %>
+        <br>
+
+        <%= label_tag :member_4, "Select Member 4" %>
+        <%= select_tag :member_4, options_from_collection_for_select(@users_without_a_team, :id, :full_name, @team.users.fourth&.id) %>
+        <br>
+
         <%= f.submit %>
       <% end %>
     </div>
