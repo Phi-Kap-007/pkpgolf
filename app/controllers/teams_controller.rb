@@ -12,10 +12,31 @@ class TeamsController < ApplicationController
 
   def new
     @team = Team.new
+    @users_without_a_team = User.where(team_id: [nil, @team.id])
   end
 
   def create
-    @team = Team.create(team_params)
+    @team = Team.create!(team_params)
+
+    user_1 = User.find(params[:member_1])
+    user_1.team = @team
+    user_1.save
+
+    user_2 = User.find(params[:member_2])
+    user_2.team = @team
+    user_2.save
+
+    user_3 = User.find(params[:member_3])
+    user_3.team = @team
+    user_3.save
+
+    user_4 = User.find(params[:member_4])
+    user_4.team = @team
+    user_4.save
+
+    # user_1 = User.find(params[:member_1])
+    # user_1 = User.find(params[:member_1])
+    # user_1 = User.find(params[:member_1])
     redirect_to teams_path
 
   end
@@ -23,10 +44,32 @@ class TeamsController < ApplicationController
   def edit
     # Might be issue
     #@team = Team.edit(team_params)
+    @users_without_a_team = User.where(team_id: [nil, @team.id])
   end
 
   def update
     @team.update(team_params)
+
+    @team.users.each do |user|
+      user.update(team_id: nil)
+    end
+
+    user_1 = User.find(params[:member_1])
+    user_1.team = @team
+    user_1.save
+
+    user_2 = User.find(params[:member_2])
+    user_2.team = @team
+    user_2.save
+
+    user_3 = User.find(params[:member_3])
+    user_3.team = @team
+    user_3.save
+
+    user_4 = User.find(params[:member_4])
+    user_4.team = @team
+    user_4.save
+
     redirect_to team_path(@team)
   end
 
@@ -38,7 +81,7 @@ class TeamsController < ApplicationController
   private
 
   def team_params
-    params.require(:team).permit(:name, :tee_off_time, :first_name, :last_name)
+    params.require(:team).permit(:name, :tee_off_time)
   end
 
   def set_team
