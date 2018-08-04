@@ -1,21 +1,21 @@
-<h1>All Teams</h1>
-<%= link_to "Add Team", new_team_path %>
+<div class="container">
+  <h1>All Teams</h1>
+  <%= link_to "Add Team", new_team_path %>
 
 
-<!-- Insert form below if/when necessary -->
+  <!-- Insert form below if/when necessary -->
 
 
-<ul>
-  <% @teams.each do |team| %>
-    <li>
-      <h2><%= link_to team.name, team_path(team) %></h2>
-      <% team.users.each_with_index do |user, index| %>
-      <p> Member <%= index + 1 %>: <%= user.first_name %> <%= user.last_name %> </p>
-      <% end %>
-      <p>Tee-Off Time: <%= team[:tee_off_time] %></p>
-      <p>Score: <%= team[:score] %></p>
-      <p><%= link_to "Edit Team", edit_team_path(team) %></p>
-      <p><%= link_to "Remove Team", team_path(team), method: :delete %></p>
-    </li>
+  <div class="card">
+    <% @teams.each do |team| %>
+    <h2><%= link_to team.name, team_path(team) %></h2>
+    <% team.users.each_with_index do |user, index| %>
+    <p> Member <%= index + 1 %>: <%= user.first_name %> <%= user.last_name %> </p>
     <% end %>
-</ul>
+    <p>Tee-Off Time: <%= team[:tee_off_time] %></p>
+    <p>Score: <%= team[:score] %></p>
+    <p><%= link_to "Edit Team", edit_team_path(team) %></p>
+    <p><%= link_to "Remove Team", team_path(team), method: :delete %></p>
+    <% end %>
+  </div>
+</div>

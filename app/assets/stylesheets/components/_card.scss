@@ -1,0 +1,40 @@
+.card {
+  height: 335px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0.5px 1px 1px 1px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  background-color: rgba(230, 230, 230, 0.1);
+  margin-bottom: 20px;
+  border-radius: 5px;
+  position: relative;
+  cursor: pointer;
+  ;
+  p{
+    color: black;
+  }
+  .card-hover{
+    display: none;
+  }
+  &:hover{
+    .card-hover{
+      position: absolute;
+      top: 0;
+      border-radius: 5px;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(70,154,224,0.9);
+      // background-color: grey;
+      opacity: 0.95;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+       color: rgb(70,154,224);
+      p{
+        color: rgb(70,154,224);
+      }
+    }
+  }
+}
