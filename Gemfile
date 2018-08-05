@@ -38,10 +38,13 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 # Frontend gems
 gem "bootstrap-sass"
+gem 'font-awesome-sass', '~> 5.0.9'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 gem 'rails-ujs', '~> 0.1.0'
 gem 'simple_form'
+gem 'autoprefixer-rails'
 gem 'webpacker', '~> 3.5'
+gem 'react-rails'
 
 # Login gems
 gem 'devise'
