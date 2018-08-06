@@ -1,5 +1,8 @@
+.card-container {
+  height: 400px;
+}
 .card {
-  height: 380px;
+  // height: 380px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -10,7 +13,14 @@
   border-radius: 5px;
   position: relative;
   cursor: pointer;
-  ;
+
+  .card-title {
+    font-size: 10px;
+  }
+
+  .card-subtitle {
+
+  }
   p{
     color: black;
   }
