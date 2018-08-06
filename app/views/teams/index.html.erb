@@ -4,21 +4,21 @@
 
   <div class="row">
     <div class="text-center">
-  <div class="col-xs-12 col-sm-6 col-md-4">
-    <% @teams.each do |team| %>
-    <div class="card">
-      <h2><%= link_to team.name, team_path(team) %></h2>
-      <% team.users.each_with_index do |user, index| %>
-      <p> Member <%= index + 1 %>: <%= user.first_name %> <%= user.last_name %> </p>
-      <% end %>
-      <p>Tee-Off Time: <%= team[:tee_off_time] %></p>
-      <p>Score: <%= team[:score] %></p>
-      <p><%= link_to "Edit Team", edit_team_path(team) %></p>
-      <p><%= link_to "Remove Team", team_path(team), method: :delete %></p>
-      </div>
-      <% end %>
-      </div>
-      </div>
+        <% @teams.each do |team| %>
+          <div class="col-xs-12 col-sm-6 col-md-4 card-container">
+            <div class="card">
+              <h2 class="card-title"><%= link_to team.name, team_path(team) %></h2>
+              <% team.users.each_with_index do |user, index| %>
+              <p> Member <%= index + 1 %>: <%= user.first_name %> <%= user.last_name %> </p>
+              <% end %>
+              <p>Tee-Off Time: <%= team[:tee_off_time] %></p>
+              <p>Score: <%= team[:score] %></p>
+              <p><%= link_to "Edit Team", edit_team_path(team) %></p>
+              <p><%= link_to "Remove Team", team_path(team), method: :delete %></p>
+            </div>
+          </div>
+
+        <% end %>
     </div>
   </div>
 </div>
