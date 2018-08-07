@@ -10,10 +10,41 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_26_153427) do
+ActiveRecord::Schema.define(version: 2018_08_07_010603) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "members", force: :cascade do |t|
+    t.integer "team_id"
+    t.string "first_name"
+    t.string "last_name"
+    t.integer "induction_year"
+    t.integer "score"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "score_hole_1"
+    t.integer "score_hole_2"
+    t.integer "score_hole_3"
+    t.integer "score_hole_4"
+    t.integer "score_hole_5"
+    t.integer "score_hole_6"
+    t.integer "score_hole_7"
+    t.integer "score_hole_8"
+    t.integer "score_hole_9"
+    t.integer "score_first_half"
+    t.integer "score_hole_10"
+    t.integer "score_hole_11"
+    t.integer "score_hole_12"
+    t.integer "score_hole_13"
+    t.integer "score_hole_14"
+    t.integer "score_hole_15"
+    t.integer "score_hole_16"
+    t.integer "score_hole_17"
+    t.integer "score_hole_18"
+    t.integer "score_second_half"
+    t.integer "total_score"
+  end
 
   create_table "teams", force: :cascade do |t|
     t.string "name"
@@ -60,6 +91,7 @@ ActiveRecord::Schema.define(version: 2018_07_26_153427) do
     t.integer "score_hole_18"
     t.integer "score_second_half"
     t.integer "total_score"
+    t.boolean "admin", default: false, null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
