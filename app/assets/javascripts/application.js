@@ -17,4 +17,4 @@
 //= require activestorage
 //= require turbolinks
 
-//= require tree ./app
+//= require_tree ./app
