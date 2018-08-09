@@ -10,8 +10,12 @@ class User < ApplicationRecord
   validates :email, presence: true
   validates :encrypted_password, presence: true
   validates :email, uniqueness: true
-
   validate :is_not_fifth_member
+
+  with_options if: :admin do |admin|
+    admin.validates :password, length: { minimum: 6 }
+    admin.validates :email, presence: true
+  end
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable

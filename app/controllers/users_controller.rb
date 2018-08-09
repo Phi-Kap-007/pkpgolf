@@ -22,11 +22,13 @@ class UsersController < ApplicationController
   end
 
   def update
-
+    # @user = User.find(params[:id])
+    # @user.assign_attributes(params[:user], as: :admin)
+    # @user.save
   end
 
   def destroy
-
+    @user.destroy
   end
 
   private

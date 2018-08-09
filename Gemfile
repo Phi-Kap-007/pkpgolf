@@ -36,6 +36,10 @@ gem 'redis', '~> 4.0'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
+# Admin gems
+gem 'activeadmin', github: 'activeadmin/activeadmin'
+gem 'inherited_resources', github: 'activeadmin/inherited_resources'
+
 # Frontend gems
 gem "bootstrap-sass"
 gem 'font-awesome-sass', '~> 5.0.9'

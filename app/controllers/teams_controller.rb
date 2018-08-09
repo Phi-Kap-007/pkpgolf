@@ -42,8 +42,6 @@ class TeamsController < ApplicationController
   end
 
   def edit
-    # Might be issue
-    #@team = Team.edit(team_params)
     @users_without_a_team = User.where(team_id: [nil, @team.id])
   end
 
