@@ -8,6 +8,39 @@ ActiveAdmin.register User do
 #
   actions :all
 
+  index do
+    selectable_column
+    column :id
+    column :email
+    column :first_name
+    column :last_name
+    column :team
+    column :admin
+    column :created_at
+    column :score_hole_1
+    column :score_hole_2
+    column :score_hole_3
+    column :score_hole_4
+    column :score_hole_5
+    column :score_hole_6
+    column :score_hole_7
+    column :score_hole_8
+    column :score_hole_9
+    column :score_first_half
+    column :score_hole_10
+    column :score_hole_11
+    column :score_hole_12
+    column :score_hole_13
+    column :score_hole_14
+    column :score_hole_15
+    column :score_hole_16
+    column :score_hole_17
+    column :score_hole_18
+    column :score_second_half
+    column :total_score
+    actions
+  end
+
   permit_params do
     permitted = [:first_name, :last_name, :score_hole_1, :score_hole_2,
       :score_hole_3, :score_hole_4, :score_hole_5, :score_hole_6, :score_hole_7,
@@ -25,7 +58,7 @@ ActiveAdmin.register User do
 
       if @user.save
         # Don't know if that's correct...
-        redirect_to admin_admin_users_url
+        redirect_to admin_dashboard
       end
     end
   end

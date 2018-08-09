@@ -8,6 +8,15 @@ ActiveAdmin.register Team do
 #
   actions :all
 
+  index do
+    selectable_column
+    column :id
+    column :name
+    column :created_at
+    column :users
+    actions
+  end
+
   permit_params do
     permitted = [:name, :tee_off_time]
     permitted << :other if params[:action] == 'create' && current_user.admin?
