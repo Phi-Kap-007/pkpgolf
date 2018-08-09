@@ -6,7 +6,7 @@ ActiveAdmin.register Team do
 #
 # or
 #
-  actions :all, except: [:update, :destroy]
+  actions :all
 
   permit_params do
     permitted = [:name, :tee_off_time]
@@ -21,7 +21,7 @@ ActiveAdmin.register Team do
 
       if @team.save
         # Don't know if that's correct...
-        redirect_to team_path(@team)
+        redirect_to admin_teams_url
       end
     end
   end

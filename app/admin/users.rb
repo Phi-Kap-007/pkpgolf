@@ -6,7 +6,7 @@ ActiveAdmin.register User do
 #
 # or
 #
-  actions :all, except: [:update, :destroy]
+  actions :all
 
   permit_params do
     permitted = [:first_name, :last_name, :score_hole_1, :score_hole_2,
@@ -25,7 +25,7 @@ ActiveAdmin.register User do
 
       if @user.save
         # Don't know if that's correct...
-        redirect_to teams_path
+        redirect_to admin_admin_users_url
       end
     end
   end
