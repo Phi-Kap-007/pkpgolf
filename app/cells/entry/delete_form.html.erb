@@ -1,3 +1,4 @@
-<%= form_tag "/entries/#{@entry[:user]}", controller: 'entries',  method: 'DELETE' do %>
+<!-- Replaced 'user' with 'member', according to tutorial -->
+<%= form_tag "/entries/#{@entry[:member]}", controller: 'entries',  method: 'DELETE' do %>
     <%= submit_tag "x", style: 'color: #fff; background: #F00; border:none;cursor: pointer' %>
 <% end %>

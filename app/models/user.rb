@@ -11,9 +11,10 @@ class User < ApplicationRecord
   validates :encrypted_password, presence: true
   validates :email, uniqueness: true
 
-  # Problem with validation below: when setting a user as admin in the console,
-  # :is_not_fifth_member puts admin outside of their team, causing weird error. Get it checkout out
-  # validate :is_not_fifth_member
+    # Problem with validation below: when setting a user as admin in the console,
+    # :is_not_fifth_member puts admin outside of their team, causing weird error. Get it checkout out
+
+    # validate :is_not_fifth_member
 
   with_options if: :admin? do |admin|
     admin.validates :password, length: { maximum: 10 }
