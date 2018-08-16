@@ -38,7 +38,6 @@ class EntriesController < ApplicationController
   def destroy
     result = delete_service.execute(name: params[:id])
     return not_found unless result
-
     respond_to do |format|
       format.html do
         redirect_to root_path

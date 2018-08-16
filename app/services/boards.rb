@@ -11,8 +11,10 @@ module Boards
 
   def self.default_options
     Leaderboard::DEFAULT_OPTIONS.merge(
-      page_size: 10
+      page_size: 10,
+      reverse: true
     )
+
   end
 
   class Base
