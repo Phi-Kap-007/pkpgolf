@@ -7,8 +7,8 @@ Rails.application.routes.draw do
   # Generic syntax:
   # verb 'path', to: 'controller#action', as: :route_name
 
-  #root to: 'pages#home'
-  root to: 'teams#index'
+  root to: 'pages#home'
+  # root to: 'teams#index'
 
   # CRUD routes for teams and users
   resources :teams, :users, :entries
