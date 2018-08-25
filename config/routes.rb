@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 
   # CRUD routes for teams and users
   resources :teams, :users, :entries
-  get 'leaderboards/show'
+  get 'leaderboard', to: 'leaderboards#show', as: :leaderboard
 
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
