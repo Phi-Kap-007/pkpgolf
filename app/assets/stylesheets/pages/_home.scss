@@ -1,1 +1,17 @@
 // Specific CSS for your home-page
+.text-center {
+    text-align: center!important;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("golf.jpg");
+
+  /* Full height */
+  height: 50%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

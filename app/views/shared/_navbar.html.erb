@@ -10,8 +10,11 @@
     <% if user_signed_in? %>
 
       <!-- Links when logged in -->
-      <%= link_to "Leaderboard", leaderboards_show_path, class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Gallery" , class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Teams", teams_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Leaderboard", leaderboard_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Gallery", gallery_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "About", about_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Contact", contact_path, class: "navbar-wagon-item navbar-wagon-link" %>
 
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
